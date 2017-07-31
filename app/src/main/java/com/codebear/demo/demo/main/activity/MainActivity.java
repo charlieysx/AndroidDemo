@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import com.codebear.demo.R;
 import com.codebear.demo.base.BaseActivity;
 import com.codebear.demo.demo.face_detection.activity.FaceDetectionActivity;
+import com.codebear.demo.demo.jni.activity.JniTestActivity;
 import com.codebear.demo.demo.main.adapter.MainButtonAdapter;
 import com.codebear.demo.demo.main.bean.MainButton;
 
@@ -53,6 +54,7 @@ public class MainActivity extends BaseActivity {
 
     private void initData() {
         buttonList.add(new MainButton(1, "人脸检测"));
+        buttonList.add(new MainButton(1, "jni-String"));
     }
 
     private void showData() {
@@ -63,6 +65,9 @@ public class MainActivity extends BaseActivity {
         switch (position) {
             case 0:
                 startActivity(new Intent(this, FaceDetectionActivity.class));
+                break;
+            case 1:
+                startActivity(new Intent(this, JniTestActivity.class));
                 break;
             default:
                 break;

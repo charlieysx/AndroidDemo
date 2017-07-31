@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".demo.face_detection.activity.FaceDetectionActivity"/>
+        <activity android:name=".demo.jni.activity.JniTestActivity"/>
     </application>
 
 </manifest>
