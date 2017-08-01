@@ -21,6 +21,9 @@
         </activity>
         <activity android:name=".demo.face_detection.activity.FaceDetectionActivity"/>
         <activity android:name=".demo.jni.activity.JniTestActivity"/>
+        <activity android:name=".demo.keyboard.activity.KeyboardActivity"/>
+        <activity android:name=".demo.keyboard.activity.NormalActivity"/>
+        <activity android:name=".demo.keyboard.activity.FullActivity"/>
     </application>
 
 </manifest>

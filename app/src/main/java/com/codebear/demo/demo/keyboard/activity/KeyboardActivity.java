@@ -1,15 +1,14 @@
-package com.codebear.demo.demo.main.activity;
+package com.codebear.demo.demo.keyboard.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.codebear.demo.R;
 import com.codebear.demo.base.BaseActivity;
-import com.codebear.demo.demo.face_detection.activity.FaceDetectionActivity;
-import com.codebear.demo.demo.jni.activity.JniTestActivity;
-import com.codebear.demo.demo.keyboard.activity.KeyboardActivity;
+import com.codebear.demo.demo.keyboard.NormalFragment;
 import com.codebear.demo.demo.main.adapter.MainButtonAdapter;
 import com.codebear.demo.demo.main.bean.MainButton;
 
@@ -18,7 +17,13 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+/**
+ * description:
+ * <p>
+ * Created by CodeBear on 2017/8/1.
+ */
+
+public class KeyboardActivity extends BaseActivity {
 
     @BindView(R.id.rcv_button)
     RecyclerView rcvButton;
@@ -54,9 +59,9 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initData() {
-        buttonList.add(new MainButton(1, "人脸检测"));
-        buttonList.add(new MainButton(2, "jni"));
-        buttonList.add(new MainButton(3, "Keyboard"));
+        buttonList.add(new MainButton(1, "Normal Activity"));
+        buttonList.add(new MainButton(2, "Normal Fragment"));
+        buttonList.add(new MainButton(3, "Full Activity"));
     }
 
     private void showData() {
@@ -66,16 +71,31 @@ public class MainActivity extends BaseActivity {
     private void openDemo(int position) {
         switch (position) {
             case 0:
-                startActivity(new Intent(this, FaceDetectionActivity.class));
+                startActivity(new Intent(this, NormalActivity.class));
                 break;
             case 1:
-                startActivity(new Intent(this, JniTestActivity.class));
+                openFragment = true;
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.add(android.R.id.content, new NormalFragment()).addToBackStack("NormalFragment");
+                ft.commit();
                 break;
             case 2:
-                startActivity(new Intent(this, KeyboardActivity.class));
+                startActivity(new Intent(this, FullActivity.class));
                 break;
             default:
                 break;
+        }
+    }
+
+    private boolean openFragment = false;
+
+    @Override
+    public void onBackPressed() {
+        if(openFragment) {
+            openFragment = false;
+            getSupportFragmentManager().popBackStack();
+        } else {
+            super.onBackPressed();
         }
     }
 }

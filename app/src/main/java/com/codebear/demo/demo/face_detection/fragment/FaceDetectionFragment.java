@@ -77,11 +77,11 @@ public class FaceDetectionFragment extends BaseFragment {
 
     @OnClick(R.id.tv_start)
     public void onStartClick() {
-        if(img == null) {
+        if (img == null) {
             T.s(mContext, "图片未加载");
             return;
         }
-        showLoading(false);
+                showLoading(false);
         Observable
                 .create(new Observable.OnSubscribe<Bitmap>() {
                     @Override
@@ -106,11 +106,12 @@ public class FaceDetectionFragment extends BaseFragment {
 
                     @Override
                     public void onError(Throwable e) {
+
                     }
 
                     @Override
                     public void onNext(Bitmap o) {
-                        if(faceNum > 0) {
+                        if (faceNum > 0) {
                             fvImg.setFaces(mFaces, faceNum);
                             T.s(mContext, "检测到" + faceNum + "张人脸");
                         } else {

@@ -11,4 +11,5 @@ public class Lib {
         System.loadLibrary("JniTest");
     }
     public static native String getHelloWorld();
+    public static native long getNum(int[] arr, int num);
 }
