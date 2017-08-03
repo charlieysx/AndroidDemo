@@ -17,7 +17,7 @@ public class ScreenUtil {
      * 根据手机的分辨率从 dip 的单位 转成为 px(像素)
      */
     public static int dip2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
+        float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dpValue * scale + 0.5f);
     }
 
@@ -25,12 +25,21 @@ public class ScreenUtil {
      * 根据手机的分辨率从 px(像素) 的单位 转成为 dip
      */
     public static int px2dip(Context context, float pxValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
+        float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
 
     public static int dp2px(Context context, int dp) {
         int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.getResources()
+                .getDisplayMetrics());
+        return px;
+    }
+
+    /**
+     * sp转成px
+     */
+    public static float sp2px(Context context, float sp) {
+        int px = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, context.getResources()
                 .getDisplayMetrics());
         return px;
     }

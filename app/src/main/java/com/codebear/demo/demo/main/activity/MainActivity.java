@@ -12,6 +12,7 @@ import com.codebear.demo.demo.jni.activity.JniTestActivity;
 import com.codebear.demo.demo.keyboard.activity.KeyboardActivity;
 import com.codebear.demo.demo.main.adapter.MainButtonAdapter;
 import com.codebear.demo.demo.main.bean.MainButton;
+import com.codebear.demo.demo.toolbar.ToolbarActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,7 @@ public class MainActivity extends BaseActivity {
         buttonList.add(new MainButton(1, "人脸检测"));
         buttonList.add(new MainButton(2, "jni"));
         buttonList.add(new MainButton(3, "Keyboard"));
+        buttonList.add(new MainButton(4, "Toolbar"));
     }
 
     private void showData() {
@@ -73,6 +75,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case 2:
                 startActivity(new Intent(this, KeyboardActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(this, ToolbarActivity.class));
                 break;
             default:
                 break;

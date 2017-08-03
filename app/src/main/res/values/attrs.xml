@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CBToolbar">
+        <attr name="toolbarColor" format="color|reference"/>
+        <attr name="toolbarHeight" format="dimension|reference"/>
+        <attr name="showShadow" format="boolean"/>
+        <attr name="shadowTopColor" format="color|reference"/>
+        <attr name="shadowBottomColor" format="color|reference"/>
+        <attr name="shadowHeight" format="dimension|reference"/>
+        <attr name="showLine" format="boolean"/>
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="lineHeight" format="dimension|reference"/>
+        <attr name="titleText" format="string|reference"/>
+        <attr name="titleColor" format="color|reference"/>
+        <attr name="titleSize" format="dimension|reference"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+    </declare-styleable>
+</resources>

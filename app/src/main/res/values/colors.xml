@@ -8,4 +8,12 @@
     <color name="black">#000000</color>
     <color name="color_E8E8E8">#E8E8E8</color>
     <color name="color_666666">#666666</color>
+
+    <color name="toolbarColorDefault">#FFFFFF</color>
+
+    <color name="shadowTopDefault">#66000000</color>
+    <color name="shadowBottomDefault">#00FFFFFF</color>
+    <color name="lineColorDefault">#666666</color>
+
+    <color name="titleColorDefault">#000000</color>
 </resources>
