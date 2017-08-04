@@ -12,6 +12,7 @@ import com.codebear.demo.demo.jni.activity.JniTestActivity;
 import com.codebear.demo.demo.keyboard.activity.KeyboardActivity;
 import com.codebear.demo.demo.main.adapter.MainButtonAdapter;
 import com.codebear.demo.demo.main.bean.MainButton;
+import com.codebear.demo.demo.starview.StarViewActivity;
 import com.codebear.demo.demo.toolbar.ToolbarActivity;
 
 import java.util.ArrayList;
@@ -59,6 +60,7 @@ public class MainActivity extends BaseActivity {
         buttonList.add(new MainButton(2, "jni"));
         buttonList.add(new MainButton(3, "Keyboard"));
         buttonList.add(new MainButton(4, "Toolbar"));
+        buttonList.add(new MainButton(5, "StarView"));
     }
 
     private void showData() {
@@ -78,6 +80,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case 3:
                 startActivity(new Intent(this, ToolbarActivity.class));
+                break;
+            case 4:
+                startActivity(new Intent(this, StarViewActivity.class));
                 break;
             default:
                 break;

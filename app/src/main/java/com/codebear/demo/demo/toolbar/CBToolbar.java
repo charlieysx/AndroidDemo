@@ -18,8 +18,6 @@ import android.widget.TextView;
 import com.codebear.demo.R;
 import com.codebear.demo.utils.ScreenUtil;
 
-import static com.codebear.demo.R.id.tv_title;
-
 /**
  * description:
  * <p>
@@ -135,7 +133,7 @@ public class CBToolbar extends FrameLayout {
         viewToolbarBg = (FrameLayout) rootView.findViewById(R.id.toolbar);
         iconLeft = (ImageView) rootView.findViewById(R.id.icon_left);
         iconRight = (ImageView) rootView.findViewById(R.id.icon_right);
-        tvTitle = (TextView) rootView.findViewById(tv_title);
+        tvTitle = (TextView) rootView.findViewById(R.id.tv_title);
         viewLine = rootView.findViewById(R.id.view_line);
         viewShadow = rootView.findViewById(R.id.view_shadow);
     }

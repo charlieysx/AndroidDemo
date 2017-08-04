@@ -55,7 +55,10 @@ public class JniStringTestFragment extends BaseFragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        tvShow.append("\nsumFromJava:" + sum1 + "\ntime:" + ((System.currentTimeMillis() - start1) / 1000.0) + "s");
+                        if (tvShow != null) {
+                            tvShow.append("\nsumFromJava:" + sum1 + "\ntime:" + ((System.currentTimeMillis() -
+                                    start1) / 1000.0) + "s");
+                        }
                     }
                 });
             }
@@ -71,7 +74,10 @@ public class JniStringTestFragment extends BaseFragment {
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        tvShow.append("\nsumFromC:" + sum2 + "\ntime:" + ((System.currentTimeMillis() - start2) / 1000.0) + "s");
+                        if (tvShow != null) {
+                            tvShow.append("\nsumFromC:" + sum2 + "\ntime:" + ((System.currentTimeMillis() - start2) /
+                                    1000.0) + "s");
+                        }
                     }
                 });
             }

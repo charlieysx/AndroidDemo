@@ -25,6 +25,7 @@
         <activity android:name=".demo.keyboard.activity.NormalActivity"/>
         <activity android:name=".demo.keyboard.activity.FullActivity"/>
         <activity android:name=".demo.toolbar.ToolbarActivity"/>
+        <activity android:name=".demo.starview.StarViewActivity"/>
     </application>
 
 </manifest>

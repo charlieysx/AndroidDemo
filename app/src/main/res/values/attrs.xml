@@ -16,4 +16,18 @@
         <attr name="leftIcon" format="reference"/>
         <attr name="rightIcon" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="StarView">
+        <attr name="starSize" format="dimension|reference"/>
+        <attr name="starPointCount" format="integer"/>
+        <attr name="starCount" format="integer"/>
+        <attr name="starSpace" format="dimension|reference"/>
+        <attr name="starMaxProgress" format="float"/>
+        <attr name="starProgress" format="float"/>
+        <attr name="starStrokeWidth" format="dimension|reference"/>
+        <attr name="showStarStroke" format="boolean"/>
+        <attr name="starStrokeColor" format="color|reference"/>
+        <attr name="starFillColor" format="color|reference"/>
+        <attr name="starCoverColor" format="color|reference"/>
+    </declare-styleable>
 </resources>
